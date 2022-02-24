@@ -1,0 +1,32 @@
+Package: RSIT
+Title: Retrospective Set-Based Gene-Environment Interaction Tests
+Version: 0.0.1.0
+Authors@R: 
+  c(person(given = "Gang",
+           family = "Xu",
+           role = c("aut", "cre"),
+           email = "xug3@unlv.nevada.edu"),
+    person(given = "Amei",
+           family = "Amei",
+           role = "aut"),
+    person(given = "Zuoheng",
+           family = "Wang",
+           role = "aut"))
+Author: Gang Xu [aut, cre], Amei Amei [aut], Zuoheng Wang [aut]
+Maintainer: Gang Xu <xug3@unlv.nevada.edu>
+Description: We propose retrospective set-based gene-environment tnteraction tests for binary trait.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Depends: R (>= 2.12.1)
+Suggests: 
+    rmarkdown,
+    knitr
+Imports: 
+    expm,
+    stats,
+    MASS,
+    utils
+VignetteBuilder: knitr
