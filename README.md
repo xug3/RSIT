@@ -23,4 +23,4 @@ devtools::install_github(repo = 'xug3/RSIT.git')
 ```
 ## Usage instructions
 
-All functions and examples in the RSVMMAT are available in the manual file (https://github.com/xug3/RSIT.git/blob/main/RSVMMAT_0.0.1.0.pdf) 
+All functions and examples in the RSVMMAT are available in the manual file (https://github.com/xug3/RSIT.git/blob/main/RSIT_0.0.1.0.pdf) 
