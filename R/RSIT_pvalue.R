@@ -24,6 +24,9 @@ RSIT_pvalue=function(TYall,G,impute.method='fixed'){
   var.G<-t(t(G)-colMeans(G));
   SNP.list<-colnames(G)
   MAF<-colMeans(as.matrix(G[,colMeans(var.G^2)!=0]), na.rm=T)/2;
+  minormaf=which(MAF>0.5)
+  if(length(minormaf)>0) G[,minormaf]=2-G[,minormaf]
+  MAF<-colMeans(as.matrix(G[,colMeans(var.G^2)!=0]), na.rm=T)/2;
   G<-as.matrix(var.G[,colMeans(var.G^2)!=0]); 
   #G<-as.matrix(G[,colMeans(var.G^2)!=0]); 
   SNP.name<-SNP.list[colMeans(var.G^2)!=0]
@@ -79,9 +82,12 @@ RGET_pvalue=function(TYall,G,impute.method='fixed'){
     G<-Impute(G,'fixed')
   }
   
-  #var.G<-t(t(G)-colMeans(G));
-  #SNP.list<-colnames(G)
-  #MAF<-colMeans(as.matrix(G[,colMeans(var.G^2)!=0]), na.rm=T)/2;
+  var.G<-t(t(G)-colMeans(G));
+  SNP.list<-colnames(G)
+  MAF<-colMeans(as.matrix(G[,colMeans(var.G^2)!=0]), na.rm=T)/2;
+  minormaf=which(MAF>0.5)
+  if(length(minormaf)>0) G[,minormaf]=2-G[,minormaf]
+  MAF<-colMeans(as.matrix(G[,colMeans(var.G^2)!=0]), na.rm=T)/2;
   #G<-as.matrix(G[,colMeans(var.G^2)!=0]); 
   #SNP.name<-SNP.list[colMeans(var.G^2)!=0]
   
